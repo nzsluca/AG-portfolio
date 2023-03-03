@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+#App {
+height: 400vh;
+width: 100vw;
+display: flex;
+ font-family: 'Red Hat Display', sans-serif;
+}
+.side-nav{
+  flex: 0.3;
+  box-sizing: content-box;
+}
+.main{
+  height: auto;
+ flex: 1;
+ border: purple 1px solid;
+}
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

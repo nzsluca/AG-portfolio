@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap');
+// applied max-heigh 54 pixel creative display none
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;0,300;0,400;0,500;1,400&display=swap');
+@mixin work-list($flex-d){
+    display: flex;
+    flex-direction: $flex-d;
+    height: 18vh;
+    padding: 10px;
+    font-size: 12px;
+    color: white;
+    gap: 1vh;
+    justify-content: space-between;
+    align-items: baseline;
+    line-height: 25px;
+    overflow: hidden;
+    position: sticky;
+
+
+}
+a{
+    color: white;
+    text-decoration: none;
+    margin: 0;
+    width: fit-content;
+    align-self: end;
+}
+#side-nav-container{
+    width: 20vw;
+    background: #1E1E1E;
+    position: fixed;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 10px;
+    // justify-content: space-evenly;
+    gap: 2vh;
+}
+.close-btn{
+    color: white;
+    position: absolute;
+    top: 5px;
+    left: 20vw;
+    cursor: pointer;
+    font-size: 15px;
+}
+.section-title{
+    padding-bottom: 3px;
+    font-size: 15px;
+    flex: 1.1;
+    height: 10vh;
+    font-size: 18px;
+}
+.creative{
+    gap: -1px;
+    @include work-list(row);
+    padding-top: 4px;
+    transition: all, 300ms, ease-in;
+  
+    span{
+        line-height: 25px;
+        font-size: 14px;
+        text-align: left;
+    }
+    a{
+        text-align: left;
+        color: white;
+    }
+    .work-list{
+    align-items: flex-start;
+    }
+}
+.creative-none{
+    display: none;
+}
+.applied{
+    padding-bottom:30px; 
+    @include work-list(row-reverse);
+    span{
+        line-height: 25px;
+        font-size: 14px;        
+        transition: color, 0.2,  ease-in-out;
+    }
+    span:hover{
+        color: rgb(170, 228, 183);
+     }
+  
+    .cicrle-box{
+        align-items: flex-end;
+    }
+}
+.cicrle-box{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    .cicrle{
+        width: 18px;
+        height: 15px;
+        border-radius: 50%;
+        background: #fdfdfd;
+        line-height: 15px;
+        
+    }
+}
+.cicrle-box-up{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    .cicrle{
+        width: 18px;
+        height: 15px;
+        border-radius: 50%;
+        background: #9e0707;
+        line-height: 15px;
+        
+    }
+}
+.work-list{
+    display: inline-flex;
+    flex-direction: column;
+    span{
+        line-height: 25px;
+        font-size: 13px;        
+        transition: color, 0.2,  ease-in-out;
+    }
+    span:hover{
+        color: rgb(170, 228, 183);
+    }
+    padding: 5px;
+}
+
+.about{
+    padding: 15px 5px 5px 5px;
+    align-self: center;
+    width: 19vh;
+    height: 5vh;
+    .ab-btn{
+        height: auto;
+        padding: 10px;
+        width: 80%;
+        background-color: #fdfdfd;
+        font-weight: bold;
+        background-image: url('../assets/profil.png');
+        background-position: center;
+        background-position-x: 42%;
+        background-position-y: 49%;
+        transition: all, 0,4s, ease-in ;
+        display: flex;
+    justify-content: center;
+        a{
+            color: #f6f6f6;
+            text-align: center;
+        }
+    }
+    .ab-btn:hover{
+        filter: invert(80%);
+        a{
+            color: white;
+        }
+    }
+    span{
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+    span{
+        font-size: 12px;
+    }
+    .contact-title{
+        font-size: 14px;
+        text-align: center;
+        color: white;
+    }
+    .email{
+        font-size: 13px;
+        text-transform: none;
+    }
+    .icons{
+        display: flex;
+        width: 100px;
+        justify-content: space-evenly;
+        .iconify{
+            height: 20px;
+            width: 30px;
+        }
+        .beha{
+            height: 22px;
+        }
+    }
+}
+.up-cicrle{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 25vw;
+    height: 45vh;
+    left: 5%;
+     top: 5%;
+    border-radius: 50%;
+    background: #fdfdfd;
+}
+.down-circle{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 25vw;
+    height: 45vh;
+    left: 5%;
+     top: 55%;
+    border-radius: 50%;
+    background: #fdfdfd;
+    .icons{
+        display: flex;
+    }
+}
+
+
+

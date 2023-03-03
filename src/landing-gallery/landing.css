@@ -1,0 +1,90 @@
+p {
+  font-size: 16px;
+}
+
+.landing-title {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 95vh;
+  bottom: 0;
+  width: 40vh;
+  font-size: 8rem;
+  font-weight: 200;
+  z-index: 4;
+}
+
+#main-container {
+  width: 90vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24vh;
+}
+
+#main-container #image-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60vh;
+  width: 50vw;
+  overflow: scroll;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  margin: auto;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 4vh;
+}
+
+#main-container #image-box img {
+  height: 92%;
+  width: 74%;
+  z-index: 4;
+}
+
+#main-container .scale-up {
+  width: 60vw;
+  z-index: 4;
+}
+
+#main-container .double {
+  width: 84vw;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+#main-container .desc-box::hover {
+  color: #ffcd1bd4;
+  border: 1px double #ffcd1bd4;
+}
+
+#main-container .desc-box {
+  border: 1px double black;
+  height: auto;
+  width: auto;
+  padding: 5px;
+}
+
+#main-container .desc-box .desc-box-name {
+  font-size: 16px;
+  display: block;
+  color: black;
+  -webkit-transition: all 2ms ease-in;
+  transition: all 2ms ease-in;
+}
+
+#main-container .desc-box .desc-box-name::hover {
+  color: #ffcd1bd4;
+  border: 1px double #ffcd1bd4;
+}
+
+#main-container .desc-box .desc-box-date {
+  font-size: 11px;
+  color: black;
+}
+/*# sourceMappingURL=landing.css.map */

@@ -1,0 +1,66 @@
+@mixin parts {
+    display: flex;
+    flex-direction: row;
+}
+#main-container{
+    display: flex;
+    height: auto;
+    width: auto;
+    flex-direction: column;
+
+}
+.img{
+    img{
+        width: 13vw;
+        height: 21vh;
+    }
+}
+.page-title{
+    font-size: 37px;
+    text-align: right;
+    padding-right: 10px;
+}
+.section-title{
+    flex: 0.4;
+    p{
+        text-align: center;
+        font-weight: 500;
+    }
+    .circle{
+        width: 81px;
+        height: 51px;
+        border-radius: 50%;
+        border: 1px red solid;
+        background-color: rgba(255, 0, 0, 0.318);
+        line-height: 15px;
+    }
+}
+.text{
+    flex: 1;
+}
+.about-me{
+    @include parts();
+}
+.cv{
+    @include parts();
+}
+.showcases{
+    width: 82%;
+    height: auto;
+    float: right;
+    
+}
+.exhibiton{
+    @include parts();
+}
+.membership{
+    @include parts();
+}
+
+.awards{
+    @include parts();
+}
+
+.press{
+    @include parts();
+}

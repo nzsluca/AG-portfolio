@@ -1,0 +1,81 @@
+p {
+  font-size: 16px;
+}
+
+.landing-title {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 95vh;
+  bottom: 0;
+  width: 40vh;
+  font-size: 8rem;
+  font-weight: 200;
+  z-index: 4;
+}
+
+#image-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: scroll;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4vh;
+}
+
+#image-box .image {
+  height: 52%;
+  width: 64%;
+  z-index: 4;
+}
+
+.scale-up {
+  width: 60vw;
+  z-index: 4;
+}
+
+.double {
+  width: 84vw;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.desc-box::hover {
+  color: #ffcd1bd4;
+  border: 1px double #ffcd1bd4;
+}
+
+.desc-box {
+  border: 1px double black;
+  height: auto;
+  width: auto;
+  padding: 5px;
+}
+
+.desc-box .desc-box-name {
+  font-size: 16px;
+  display: block;
+  color: black;
+  -webkit-transition: all 2ms ease-in;
+  transition: all 2ms ease-in;
+}
+
+.desc-box .desc-box-name::hover {
+  color: #ffcd1bd4;
+  border: 1px double #ffcd1bd4;
+}
+
+.desc-box .desc-box-date {
+  font-size: 11px;
+  color: black;
+}
+/*# sourceMappingURL=scroll-galery.css.map */
