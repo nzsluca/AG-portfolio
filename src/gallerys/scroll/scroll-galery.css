@@ -14,7 +14,7 @@ p {
   z-index: 4;
 }
 
-#image-box {
+#image-conatiner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,10 +32,27 @@ p {
   gap: 4vh;
 }
 
-#image-box .image {
-  height: 52%;
-  width: 64%;
+.image-box {
   z-index: 4;
+  height: 99vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.image {
+  -webkit-box-flex: 0.8;
+      -ms-flex: 0.8;
+          flex: 0.8;
+  height: 62vh;
+  z-index: 4;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .scale-up {
