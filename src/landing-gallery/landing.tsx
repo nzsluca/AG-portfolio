@@ -8,8 +8,8 @@ import * as aranykapu2 from "../assets/creative/aranykapu/arany2.jpg"
 import * as aranykapu3 from "../assets/creative/kerdezz_anyamrol/arany1.jpg"
 import * as aranykapu4 from "../assets/creative/kerdezz_anyamrol/arany.jpg"
 import Scroll from '../gallerys/scroll/scroll-galery';
-import { getAlbumss } from '../services/gallery-service';
-import { data$ } from '../services/gallery-service';
+// import { getAlbumss } from '../services/gallery-service';
+// import { data$ } from '../services/gallery-service';
 
 
 
@@ -36,7 +36,7 @@ function Landing() {
     const [imgFram, setImgFrame] = React.useState(false)
 
     // let innerWidth = window.innerWidth 
-    getAlbumss()
+    // getAlbumss()
     let  datafromImgur: imgurGalleryPic
     
     // data$.subscribe((e) => {
