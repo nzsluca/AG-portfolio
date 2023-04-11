@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;0,300;0,400;0,500;1,400&display=swap");
+h2 {
+  font-size: 2rem;
+}
+
 a {
   color: white;
   text-decoration: none;
@@ -78,7 +82,7 @@ a {
 }
 
 .creative span {
-  line-height: 25px;
+  line-height: 15px;
   font-size: 14px;
   text-align: left;
 }

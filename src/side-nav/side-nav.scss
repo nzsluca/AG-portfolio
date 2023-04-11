@@ -17,6 +17,9 @@
 
 
 }
+h2{
+    font-size: 2rem;
+}
 a{
     color: white;
     text-decoration: none;
@@ -58,7 +61,7 @@ a{
     transition: all, 300ms, ease-in;
   
     span{
-        line-height: 25px;
+        line-height: 15px;
         font-size: 14px;
         text-align: left;
     }

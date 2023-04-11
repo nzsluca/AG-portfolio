@@ -25,7 +25,7 @@ function AboutMe() {
         <>
             <div id="main-container">
                 <div className="big-titles">
-                    <h3 className="page-title"> About me</h3>
+                    <h3 className="title"> About me</h3>
                 </div>
                 <div className="about-me">
                     <div className="img">
@@ -85,7 +85,7 @@ function AboutMe() {
                 </div>
                 <div id="project-container">
                     <div className="big-titles">
-                        <h3 className="page-title"> Project List</h3>
+                        <h3 className="title"> Project List</h3>
                     </div>
                     <div className="about-me">
                         <div className="img">

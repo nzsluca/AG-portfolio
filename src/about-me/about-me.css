@@ -15,6 +15,12 @@
   height: 21vh;
 }
 
+.title {
+  font-size: 37px;
+  text-align: right;
+  padding-right: 10px;
+}
+
 .section-title {
   -webkit-box-flex: 0.4;
       -ms-flex: 0.4;
