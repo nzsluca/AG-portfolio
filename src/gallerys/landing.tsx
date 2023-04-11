@@ -48,64 +48,16 @@ function Landing() {
 
             <div id='main-container'>
                 <div id='image-box' >
-                    {file.images.map((e) => {
-                        return (  <img src={e} alt=""/>)
-                    })}
+                
+                    <img src={aranykapu2.default} alt="" />
                 <div className='desc-box'>
                     <span className='desc-box-name'>{kerdezz_anyamrol.titleEng}</span>
                     <span className='desc-box-date'>2022</span>
                 </div>
                 </div>
-                <div className='image-box scale-up'>
-                <div className='desc-box'>
-                    <span className='desc-box-name'>Name of the series</span>
-                    <span className='desc-box-date'>Date</span>
-                </div>
-                <img  src={aranykapu2.default} />
-                </div>
-                <div className='image-box double'>
-                <img src={aranykapu3.default} />
-                <div className='desc-box'>
-                    <span className='desc-box-name'>Name of the series</span>
-                    <span className='desc-box-date'>Date</span>
-                </div>
-                <div className='desc-box'>
-                    <span className='desc-box-name'>Name of the series</span>
-                    <span className='desc-box-date'>Date</span>
-                </div>
-                {/* <img src={aranykapu4.default} /> */}
                
-                </div>
 
-                <div className='image-box'>
-                    {file.images.map((e) => {
-                        return (  <img src={e} alt=""/>)
-                    })}
-                <div className='desc-box'>
-                    <span className='desc-box-name'>{kerdezz_anyamrol.titleEng}</span>
-                    <span className='desc-box-date'>2022</span>
-                </div>
-                </div>
-                <div className='image-box scale-up'>
-                <div className='desc-box'>
-                    <span className='desc-box-name'>Name of the series</span>
-                    <span className='desc-box-date'>Date</span>
-                </div>
-                <img  src={aranykapu2.default} />
-                </div>
-                <div className='image-box double'>
-                <img src={aranykapu3.default} />
-                <div className='desc-box'>
-                    <span className='desc-box-name'>Name of the series</span>
-                    <span className='desc-box-date'>Date</span>
-                </div>
-                <div className='desc-box'>
-                    <span className='desc-box-name'>Name of the series</span>
-                    <span className='desc-box-date'>Date</span>
-                </div>
-                {/* <img src={aranykapu4.default} /> */}
-               
-                </div>
+                
             </div>
         </>
 

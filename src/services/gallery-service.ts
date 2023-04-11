@@ -13,17 +13,18 @@ const Option: AxiosRequestConfig = {
     method: 'GET',
     url: baseUrl,
     headers: {
-      'Content-Type': 'application/json',
-    //   'Auth-Token': portfolioToken,
-      'Authorization': 'Clien-ID ' +  userID ,
+      //  'Auth-Token': portfolioToken,
+      Authorization: 'Client-ID 95fdc70ccbf43ad',
     },
   };
 
  export function getAlbumss(): any {
     const result =  axios(Option);
-    console.warn(result);
-    data$.next(result)
-    
+    result.then((res) => {
+      data$.next(res.data)
+    })
+  // console.warn(data$);s
+      
     
   }
 

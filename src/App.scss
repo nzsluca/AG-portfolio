@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;1,300&display=swap');
 #App {
-height: 400vh;
-width: 100vw;
+height: auto;
+
 display: flex;
  font-family: 'Red Hat Display', sans-serif;
 }
+
 .side-nav{
   flex: 0.3;
   box-sizing: content-box;
 }
 .main{
   height: auto;
- flex: 1;
+  width: 167%;
+  flex: 1;
 }
   @media (prefers-reduced-motion: no-preference) {
     .App-logo {
@@ -27,3 +29,10 @@ display: flex;
       transform: rotate(360deg);
     }
   }
+
+  // MIXINS 
+
+@mixin titles($color){
+  font-size: 8rem;
+  font-weight: 200;
+}

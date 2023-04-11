@@ -8,106 +8,100 @@ import * as aranykapu2 from "../assets/creative/aranykapu/arany2.jpg"
 import * as aranykapu3 from "../assets/creative/kerdezz_anyamrol/arany1.jpg"
 import * as aranykapu4 from "../assets/creative/kerdezz_anyamrol/arany.jpg"
 import Scroll from '../gallerys/scroll/scroll-galery';
+import { getAlbumss } from '../services/gallery-service';
+import { data$ } from '../services/gallery-service';
 
 
 
 
 function Landing() {
 
+    interface imgurGalleryPic {
+        id: string,
+        description: string,
+        images: string[],
+        images_count: number, 
+        title: string,
+
+    }
     const file = kerdezz_anyamrol
 
     // intersection Observer 
-    const titleRef = React.useRef(document.getElementById('image-box'))
+    const imgBoxRef = React.useRef(null)
     const [isVisible, setIsVisible] = React.useState(false)
+
+
     const [title, setTitle] = React.useState('Main Title')
+    const [fullView, setFullView] = React.useState(false)
+    const [imgFram, setImgFrame] = React.useState(false)
+
+    // let innerWidth = window.innerWidth 
+    getAlbumss()
+    let  datafromImgur: imgurGalleryPic
     
+    // data$.subscribe((e) => {
+    //         datafromImgur.description = e.data;
+    //         datafromImgur.id = e.data.id;
+    //         datafromImgur.images = e.data.images;
+    //         datafromImgur.images_count = e.data.images_count; 
+    //         datafromImgur.title = e.data.title
+    //         return datafromImgur
+    // })
+
     const titleChange = (entries: any) => {
         const [entry] = entries
         setIsVisible(entry.isIntersecting)
-        setTitle('Chnaged Titel')
+        setTitle('Latest Works')
     }
+
+
+    let galleyContainer = document.getElementById('gallery-container')
+
     const option = {
-        root: titleRef.current,
-        rootMargin: '0px',
-        threshold: 0.5,
+        root: galleyContainer,
+        rootMargin: '30px',
+        threshold: 1,
     }
     React.useEffect(() => {
         const observer = new IntersectionObserver(titleChange, option)
-        if(titleRef.current) observer.unobserve(titleRef.current)
-        return() => {
-        if(titleRef.current) observer.unobserve(titleRef.current)
-        console.warn(titleRef);
-
+        if (imgBoxRef.current) observer.observe(imgBoxRef.current)  
+        return () => {
+            if (imgBoxRef.current) observer.unobserve(imgBoxRef.current)
         }
-        
-    },[titleRef, option])
 
-    
+    }, [imgBoxRef, option])
+
+    // function createFrames(e: any, key: number) {
+    //     setImgFrame(!imgFram)
+    //     return (
+    //         <div key={key} className={imgFram ? 'long-frame' : 'wide-frame'}>
+    //             <img onClick={() => setFullView(!fullView)} className={fullView ? 'image s2' : 'image'} src={e} alt="" />
+    //         </div>
+    //     )
+
+    // }
+
+
+
     return (
         <>
-           {/* <span className='landing-title'  ref={titleRef} >{title}</span> */}
-                      <Scroll></Scroll>
+            <span className='page-title'>{title}</span>
+            <div id='gallery-container'>
 
-            {/* <div id='main-container'>
-                <div id='image-box' >
-                    {file.images.map((e) => {
-                        return (  <img src={e} alt=""/>)
-                    })}
-                <div className='desc-box'>
-                    <span className='desc-box-name'>{kerdezz_anyamrol.titleEng}</span>
-                    <span className='desc-box-date'>2022</span>
+                {file.images.map((data, i) => {
+        return  (
+            <div key={i} className={'long-frame'} >
+                <img ref={imgBoxRef} onChange={() => setTitle('New Title')}  onClick={() => setFullView(!fullView)} className={fullView ? 'image s2' : 'image'} src={data} alt="" />
+            </div>
+        )
+         })}
+                <div className='description-box'>
+                    <h2>Title</h2>
+                    <span>Year</span>
+                    <a href="/glarrey">Go to Album</a>
                 </div>
-                </div>
-                <div className='image-box scale-up'>
-                <div className='desc-box'>
-                    <span className='desc-box-name'>Name of the series</span>
-                    <span className='desc-box-date'>Date</span>
-                </div>
-                <img  src={aranykapu2.default} />
-                </div>
-                <div className='image-box double'>
-                <img src={aranykapu3.default} />
-                <div className='desc-box'>
-                    <span className='desc-box-name'>Name of the series</span>
-                    <span className='desc-box-date'>Date</span>
-                </div>
-                <div className='desc-box'>
-                    <span className='desc-box-name'>Name of the series</span>
-                    <span className='desc-box-date'>Date</span>
-                </div>
-                {/* <img src={aranykapu4.default} /> */}
-               
-                {/* </div>
 
-                <div className='image-box'>
-                    {file.images.map((e) => {
-                        return (  <img src={e} alt=""/>)
-                    })}
-                <div className='desc-box'>
-                    <span className='desc-box-name'>{kerdezz_anyamrol.titleEng}</span>
-                    <span className='desc-box-date'>2022</span>
-                </div>
-                </div>
-                <div className='image-box scale-up'>
-                <div className='desc-box'>
-                    <span className='desc-box-name'>Name of the series</span>
-                    <span className='desc-box-date'>Date</span>
-                </div>
-                <img  src={aranykapu2.default} />
-                </div>
-                <div className='image-box double'>
-                <img src={aranykapu3.default} />
-                <div className='desc-box'>
-                    <span className='desc-box-name'>Name of the series</span>
-                    <span className='desc-box-date'>Date</span>
-                </div>
-                <div className='desc-box'>
-                    <span className='desc-box-name'>Name of the series</span>
-                    <span className='desc-box-date'>Date</span>
-                </div>
-               
-                </div>
-            </div>  */}
+            </div>
 
 
         </>
